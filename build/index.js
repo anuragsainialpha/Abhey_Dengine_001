@@ -18,7 +18,7 @@ app.use(express_1.default.static(path_1.default.join(__dirname, 'public')));
 app.get('*', (req, res) => {
     return res.sendFile(path_1.default.join(__dirname, 'public', 'index.html'));
 });
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 const server = app.listen(port, listenerCallback());
 function listenerCallback() {
     return () => winston_1.default.info(`Listening on port ${port}...`);
